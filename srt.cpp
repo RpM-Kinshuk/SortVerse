@@ -1,20 +1,40 @@
 //#include<stdafx.h>
-#include "Sorting in C++/insort.hpp"
-#include "Sorting in C++/bubblesort.hpp"
-#include "Sorting in C++/countsort.hpp"
-#include "Sorting in C++/DNFSort.hpp"
-#include "Sorting in C++/mergesort.hpp"
-#include "Sorting in C++/qusort.hpp"
-#include "Sorting in C++/selsort.hpp"
-#include "Sorting in C++/wavesort.hpp"
-#include <bits/stdc++.h>
+#include "test/InputHandler.hpp"
+#include "C++ Handler.hpp"
+
+using std::cin;
+using std::cout;
+using std::vector;
+
+#define FastIO                             \
+    std::ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);
+#define CHOICE                                                \
+    cout << "Input specifier:\n1.Manual\n2.File\n3.Random\n"; \
+    cin >> ch;
 
 int main()
 {
-    long long arr[] = {1, 7, 8, 4, 3, 6, 3, 2, 5, 2, 4, 4, 2};
-    long long n = sizeof(arr) / sizeof(long long);
-    std::sort(&arr[0],&arr[n]);
-    for (long long i = 0; i < n; i++)
-        std::cout << arr[i] << " ";
+    cout << "\n";
+    long long a, n = 0;
+    int ch;
+
+    Ki::InputChoice(3);
+
+    (void)!freopen("test/Input Data.txt", "r", stdin);
+    //(void)!freopen("test/Output Data.txt","w",stdout);
+
+    vector<long long> vec, temp;
+    while (cin >> a)
+    {
+        vec.push_back(a);
+    }
+    n = vec.size();
+    temp = vec;
+
+    cout << "\n\n";
+
+    Ki::CPPSort(vec, n, temp);
+
     return 0;
 }
