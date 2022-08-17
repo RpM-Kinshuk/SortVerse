@@ -1,11 +1,5 @@
 #include <iostream>
-using namespace std;
-void swap(long long *arr, long long i, long long j)
-{
-    long long temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
+
 long long split(long long *arr, long long l, long long r)
 {
     long long pivot = arr[r];
@@ -15,23 +9,23 @@ long long split(long long *arr, long long l, long long r)
         if (arr[j] < pivot)
         {
             i++;
-            swap(arr, i, j);
+            std::swap(arr[i], arr[j]);
         }
     }
-    swap(arr, i + 1, r);
+    std::swap(arr[i + 1], arr[r]);
     return i + 1;
 }
-void qsort(long long *arr, long long l, long long r)
+void qusort(long long *arr, long long l, long long r)
 {
     if (l < r)
     {
         long long pi = split(arr, l, r);
-        qsort(arr, pi + 1, r);
-        qsort(arr, l, pi - 1);
+        qusort(arr, pi + 1, r);
+        qusort(arr, l, pi - 1);
     }
     return;
 }
-long long main(void)
+/*int main()
 {
     long long n;
     cin >> n;
@@ -44,4 +38,4 @@ long long main(void)
     for (long long i = 0; i < n; i++)
         cout << arr[i] << " ";
     return 0;
-}
+}*/

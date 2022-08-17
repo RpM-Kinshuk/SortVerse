@@ -1,6 +1,4 @@
-#include <iostream>
-using namespace std;
-void merge(long long arr[], long long l, long long mid, long long r)
+void merge(long long* arr, long long l, long long mid, long long r)
 {
     long long n1 = mid - l + 1;
     long long n2 = r - mid;
@@ -37,10 +35,9 @@ void merge(long long arr[], long long l, long long mid, long long r)
         k++;
         j++;
     }
-    return;
 }
 
-void mergesort(long long arr[], long long l, long long r)
+void mergesort(long long* arr, long long l, long long r)
 {
     if (l < r)
     {
@@ -49,10 +46,9 @@ void mergesort(long long arr[], long long l, long long r)
         mergesort(arr, mid + 1, r);
         merge(arr, l, mid, r);
     }
-    return;
 }
 
-long long main(void)
+/*int main()
 {
     long long n;
     // printf("Enter size of array: "); scanf("%d",&n);
@@ -67,4 +63,4 @@ long long main(void)
     // delete[]arr;
     // free(arr);
     return 0;
-}
+}*/

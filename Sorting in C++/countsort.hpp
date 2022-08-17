@@ -1,5 +1,3 @@
-#include <iostream>
-using namespace std;
 void countsort(long long *arr, long long n)
 {
     long long m = arr[0];
@@ -26,9 +24,8 @@ void countsort(long long *arr, long long n)
     {
         arr[i] = output[i];
     }
-    return;
 }
-int main()
+/*int main()
 {
     long long n;
     // printf("Enter size of array: ");
@@ -41,4 +38,4 @@ int main()
     for (long long i = 0; i < n; i++)
         cout << arr[i] << " ";
     return 0;
-}
+}*/
