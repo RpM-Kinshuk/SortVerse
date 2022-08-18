@@ -15,7 +15,7 @@ namespace tmp
         srand((unsigned)time(NULL));
         for (long long i = 0; i < n; i++)
         {
-            file << rand() % 10000000000 << " ";
+            file << rand() << " ";
         }
         file.close();
     }

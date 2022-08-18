@@ -17,17 +17,11 @@ namespace Ki
     {
         cout << "Welcome to C++ Sort!\n\n";
         std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
-        std::sort(temp.begin(),temp.end());
+        std::sort(temp.begin(), temp.end());
         std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1).count();
         cout << "C++ Sort: " << duration << " microseconds\n\n";
-
-        ClockStart
-            Ki::SelectionSort(temp, n);
-        ClockEnd
-            duration = FindDuration;
         temp = vec;
-        cout << "Selection Sort: " << duration << " microseconds\n\n";
 
         ClockStart
             Ki::InsertionSort(temp, n);
@@ -49,6 +43,13 @@ namespace Ki
             duration = FindDuration;
         temp = vec;
         cout << "Quick Sort: " << duration << " microseconds\n\n";
+
+        ClockStart
+            Ki::SelectionSort(temp, n);
+        ClockEnd
+            duration = FindDuration;
+        temp = vec;
+        cout << "Selection Sort: " << duration << " microseconds\n\n";
 
         ClockStart
             Ki::CountSort(temp, n);
