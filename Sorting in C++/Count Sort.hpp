@@ -9,7 +9,7 @@ namespace Ki
         {
             m = (m > arr[i]) ? m : arr[i];
         }
-        long long count[m + 1] = {0};
+        vector<long long> count(m+1,0);
         for (long long i = 0; i < n; i++)
         {
             count[arr[i]]++;
@@ -19,15 +19,16 @@ namespace Ki
             count[i] += count[i - 1]; // printf("%d ",count[i]);
         }
         // printf("\n");
-        long long output[n];
+        vector<long long> output(n);
         for (long long i = 0; i < n; i++)
         {
             output[--count[arr[i]]] = arr[i];
         }
-        for (long long i = 0; i < n; i++)
+        /*for (long long i = 0; i < n; i++)
         {
             arr[i] = output[i];
-        }
+        }*/
+        arr = output;
     }
 }
 
