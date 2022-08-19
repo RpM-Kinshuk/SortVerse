@@ -10,7 +10,7 @@ using std::vector;
     std::ios_base::sync_with_stdio(false); \
     cin.tie(NULL);
 #define CHOICE                                                \
-    cout << "Input specifier:\n1.Manual\n2.File\n3.Random\n"; \
+    cout << "//Available Inputs:\n1.Manual\n2.File\n3.Random\n\nInput specifier: "; \
     cin >> a;
 
 int main()
