@@ -4,17 +4,19 @@ namespace Ki
 {
     void CountSort(vector<long long> &arr, long long &n)
     {
-        long long m = arr[0];
+        long long mx = arr[0], mn = arr[0];
         for (long long i = 0; i < n; i++)
         {
-            m = (m > arr[i]) ? m : arr[i];
+            mx = (mx > arr[i]) ? mx : arr[i];
+            mn = (mn < arr[i]) ? mn : arr[i];
         }
-        vector<long long> count(m+1,0);
+        long long range = mx - mn + 1;
+        vector<long long> count(range, 0);
         for (long long i = 0; i < n; i++)
         {
-            count[arr[i]]++;
+            count[arr[i] - mn]++;
         }
-        for (long long i = 1; i <= m; i++)
+        for (long long i = 1; i < range; i++)
         {
             count[i] += count[i - 1]; // printf("%d ",count[i]);
         }
@@ -22,7 +24,7 @@ namespace Ki
         vector<long long> output(n);
         for (long long i = 0; i < n; i++)
         {
-            output[--count[arr[i]]] = arr[i];
+            output[--count[arr[i] - mn]] = arr[i];
         }
         /*for (long long i = 0; i < n; i++)
         {
