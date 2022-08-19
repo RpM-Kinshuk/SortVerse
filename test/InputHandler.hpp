@@ -47,9 +47,7 @@ namespace Ki
             tmp::manual();
         else if (ch == 2)
             ; // do nothing, main.cpp will handle this
-        else if (ch == 3)
-            tmp::random();
         else
-            cout << "\nInvalid choice!\n";
+            tmp::random();
     }
 }

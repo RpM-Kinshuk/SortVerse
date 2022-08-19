@@ -11,15 +11,15 @@ using std::vector;
     cin.tie(NULL);
 #define CHOICE                                                \
     cout << "Input specifier:\n1.Manual\n2.File\n3.Random\n"; \
-    cin >> ch;
+    cin >> a;
 
 int main()
 {
     cout << "\n";
-    long long a, n = 0;
-    int ch;
+    long long a = 3, n = 0;
 
-    Ki::InputChoice(3);
+    CHOICE
+    Ki::InputChoice(a);
 
     (void)!freopen("test/Input Data.txt", "r", stdin);
     //(void)!freopen("test/Output Data.txt","w",stdout);
