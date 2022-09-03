@@ -1,0 +1,38 @@
+->  Counting Sort is the fastest sorting algorithm for BIG data with 
+    integers within the range of 0 TO FEW 10000s and should be strictly 
+    prefered over others in the mentioned case.
+
+->  Quick Sort (w/out any optimizations) falls behind other sorting 
+    algorithms badly as data becomes more homogeneous, mainly sorted,
+    and most importantly, mainly unsorted.
+
+->  Bubble sort with the swap count optimization works the fastest on 
+    already sorted data or data with a neglible few "anomalies".
+
+->  Insertion sort works really well with data which is mostly sorted 
+    and almost on par with Bubble sort for neglible few anomalies case
+    and hence  is almost always a better alternative to Bubble Sort in 
+    specific.
+
+->  For a small dataset (few hundreds), Quick Sort takes over other 
+    sorting algorithms regardless of data type and STD sort clearly 
+    falls over to insertion sort itself as they perform VERY similarly.
+
+->  For a dataset having few thousand elements, Merge sort and Quick sort 
+    perform very similarly regardless of data type.
+
+->  Quick Sort is definitely the worst algorithm at handling sorted data
+    falling even behind count sort in that case.
+
+->  Quick Sort (w/out any optimizations) breaks beyond totally unsorted 
+    data with a size beyond ~3e4 elements.
+
+->  Counting Sort breaks with data ranging roughly beyond +/-1e9 or +2e9
+    (probably due to memory limits in a system restricted to 4GB RAM).
+
+->  To sort a certain scenario of (totally) unsorted data of size 1e4, 
+    Quick Sort (w/out optimizations) took 265,182 µs of time, and when 
+    doubling the same data to 2e4, it took 1,022,098 µs which is really 
+    close to the theoretical 1,060,728 µs (4 times as much) of time it 
+    was supposed to take pertaining to its worst case time complexity 
+    of O(n²).
