@@ -15,12 +15,12 @@ namespace Ki
 {
     void CPPSort(vector<long long> vec, long long n, vector<long long> temp)
     {
-        cout << "~~~~~~~~~ Sorting with C++ ~~~~~~~~~\n\n";
+        cout << "~~~~~~~~~~~~ Sorting with C++ ~~~~~~~~~~~~\n\n";
         std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
         std::sort(temp.begin(), temp.end());
         std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1).count();
-        cout << "STD Sort: " << duration << " microseconds\n\n";
+        cout << "> STD Sort: " << duration << " microseconds\n\n";
         temp = vec;
 
         ClockStart
@@ -28,34 +28,34 @@ namespace Ki
         ClockEnd
             duration = FindDuration;
         temp = vec;
-        cout << "Insertion Sort: " << duration << " microseconds\n\n";
+        cout << "> Insertion Sort: " << duration << " microseconds\n\n";
 
         ClockStart
             Ki::MergeSort(temp, 0, n - 1);
         ClockEnd
             duration = FindDuration;
         temp = vec;
-        cout << "Merge Sort: " << duration << " microseconds\n\n";
+        cout << "> Merge Sort: " << duration << " microseconds\n\n";
 
         ClockStart
             Ki::QuickSort(temp, 0, n - 1);
         ClockEnd
             duration = FindDuration;
         temp = vec;
-        cout << "Quick Sort: " << duration << " microseconds\n\n";
+        cout << "> Quick Sort: " << duration << " microseconds\n\n";
 
         ClockStart
             Ki::SelectionSort(temp, n);
         ClockEnd
             duration = FindDuration;
         temp = vec;
-        cout << "Selection Sort: " << duration << " microseconds\n\n";
+        cout << "> Selection Sort: " << duration << " microseconds\n\n";
 
         ClockStart
             Ki::CountSort(temp, n);
         ClockEnd
             duration = FindDuration;
-        cout << "Counting Sort: " << duration << " microseconds\n\n";
+        cout << "> Counting Sort: " << duration << " microseconds\n\n";
         temp = vec;
 
         ClockStart
@@ -63,16 +63,16 @@ namespace Ki
         ClockEnd
             duration = FindDuration;
         temp = vec;
-        cout << "Bubble Sort: " << duration << " microseconds\n\n";
+        cout << "> Bubble Sort: " << duration << " microseconds\n\n";
 
         ClockStart
             Ki::HybridQuickSort(temp, 0, n - 1);
         ClockEnd
             duration = FindDuration;
         temp = vec;
-        cout << "Hybrid Quick Sort: " << duration << " microseconds\n\n";
+        cout << "> Hybrid Quick Sort: " << duration << " microseconds\n\n";
 
-        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
 }
 // ClockStart
