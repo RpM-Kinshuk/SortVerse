@@ -65,6 +65,13 @@ namespace Ki
         temp = vec;
         cout << "Bubble Sort: " << duration << " microseconds\n\n";
 
+        ClockStart
+            Ki::HybridQuickSort(temp, 0, n - 1);
+        ClockEnd
+            duration = FindDuration;
+        temp = vec;
+        cout << "Hybrid Quick Sort: " << duration << " microseconds\n\n";
+
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
 }
