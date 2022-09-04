@@ -42,3 +42,11 @@ Last Updated : September 3, 2022
     data to 2e4, it took 1,022,098 µs which is really close to the theoretical 
     1,060,728 µs of time (4 times as much) it was supposed to take pertaining 
     to its worst case time complexity of O(n²).
+
+->  Hoare Partitioning not only outperforms the last element pivot technique 
+    but also the Lomuto Partitioning. The difference measured against the last
+    element pivoting is about 1.1x to 1.5x difference in speed of execution,
+    averaging to about 30% increase in speed which, not only being sizeable can
+    make a big difference on larger datasets.
+    The same optimization makes Quick Sort and Hybrid Quick Sort come on part
+    with Merge Sort trading blows with it very frequently.
