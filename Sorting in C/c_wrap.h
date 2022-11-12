@@ -1,7 +1,7 @@
 #define customswp
 #include "swp.h"
-
-
+#include "BubbleSort.h"
+#include "SelectionSort.h"
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,9 +24,7 @@
 #include <semaphore.h>
 #include <signal.h>
 #include <time.h>
-#include "BubbleSort.h"
 #include "InsertionSort.h"
-#include "SelectionSort.h"
 #include "MergeSort.h"
 #include "QuickSort.h"
 #include "DNFSort.h"
