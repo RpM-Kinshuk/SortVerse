@@ -15,6 +15,7 @@ namespace Ki
 {
     void CPPSort(vector<long long> vec, long long n, vector<long long> temp)
     {
+        cout << "\n\n";
         cout << "~~~~~~~~~~~~ Sorting with C++ ~~~~~~~~~~~~\n\n";
         std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
         std::sort(temp.begin(), temp.end());
