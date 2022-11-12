@@ -1,6 +1,7 @@
 //#include<stdafx.h>
 #include "test/InputHandler.hpp"
 #include "C++ Handler.hpp"
+#include "C Handler.hpp"
 
 using std::cin;
 using std::cout;
@@ -32,9 +33,9 @@ int main()
     n = vec.size();
     temp = vec;
 
-    cout << "\n\n";
-
     Ki::CPPSort(vec, n, temp);
+
+    Ki::CSort(vec, n);
 
     return 0;
 }
