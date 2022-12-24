@@ -5,8 +5,9 @@
 #include "c_selsrt.h"
 #include "c_insertion.h"
 #include "c_mergesrt.h"
-#include "C_qsrt.h"
+#include "c_qsrt.h"
 #include "c_cntsrt.h"
+#include "c_wavesrt.h"
 /*
 #include <stdio.h>
 #include <stdlib.h>
