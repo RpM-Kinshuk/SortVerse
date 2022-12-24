@@ -3,6 +3,7 @@
 #include "vectorray.hpp"
 #include "c_bubble.h"
 #include "c_selsrt.h"
+#include "c_insertion.h"
 /*
 #include <stdio.h>
 #include <stdlib.h>
