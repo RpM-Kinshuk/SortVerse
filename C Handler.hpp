@@ -39,6 +39,13 @@ namespace Ki
         cout << "> Bubble Sort: " << duration << " microseconds\n\n";
         free(temp); temp = tmp::vectorray(vec, n);
 
+        ClockStart
+            C_MrgSrt(temp, 0, n-1);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Merge Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
+
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
 }
