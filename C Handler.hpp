@@ -13,18 +13,30 @@ using std::vector;
 
 namespace Ki
 {
+    int cmpfunc (const void * a, const void * b)
+    {
+        return ( *(int*)a - *(int*)b );
+    }
+
     void CSort(vector <long long> vec, long long n)
     {
         cout << "\n\n";
         cout << "~~~~~~~~~~~~~ Sorting with C ~~~~~~~~~~~~~\n\n";
         long long *temp = tmp::vectorray(vec, n);
         std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
-        c_insertion(temp, n);
+        qsort((void*)temp, n, sizeof(temp[0]), cmpfunc);
         std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1).count();
-        cout << "> Insertion Sort: " << duration << " microseconds\n\n";
+        cout << "> Inbuilt QSort: " << duration << " microseconds\n\n";
         free(temp); temp = tmp::vectorray(vec, n);
 
+        ClockStart
+            c_insertion(temp, n);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Insertion Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
+        
         ClockStart
             C_MrgSrt(temp, 0, n-1);
         ClockEnd
