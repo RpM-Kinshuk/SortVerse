@@ -52,7 +52,7 @@ namespace Ki
         free(temp); temp = tmp::vectorray(vec, n);
 
         ClockStart
-            c_selectsrt(temp, n);
+            C_SelectSrt(temp, n);
         ClockEnd
             duration = FindDuration;
         cout << "> Selection Sort: " << duration << " microseconds\n\n";
@@ -66,7 +66,7 @@ namespace Ki
         free(temp); temp = tmp::vectorray(vec, n);
 
         ClockStart
-            c_bubble(temp, n);
+            C_Bubble(temp, n);
         ClockEnd
             duration = FindDuration;
         cout << "> Bubble Sort: " << duration << " microseconds\n\n";

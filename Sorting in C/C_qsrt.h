@@ -4,8 +4,7 @@
 
 long long C_Split(long long *arr, long long l, long long r)
 {
-    long long pivot = arr[r];
-    long long i = l - 1;
+    long long pivot = arr[r], i = l - 1;
     for (long long j = l; j < r; j++)
     {
         if (arr[j] < pivot)

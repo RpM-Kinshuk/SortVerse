@@ -2,7 +2,7 @@
 #include "swp.h"
 #endif
 
-void c_selectsrt(long long arr[], long long n)
+void C_SelectSrt(long long arr[], long long n)
 {
     long long i, j, min_idx;
     for (i = 0; i < n - 1; i++)

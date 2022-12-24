@@ -2,7 +2,7 @@
 #include "swp.h"
 #endif
 
-void c_bubble(long long arr[], long long n)
+void C_Bubble(long long arr[], long long n)
 {
     long long i, j;
     for (i = 0; i < n - 1; i++)
