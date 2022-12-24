@@ -33,6 +33,13 @@ namespace Ki
         free(temp); temp = tmp::vectorray(vec, n);
 
         ClockStart
+            C_QuickSort(temp, 0, n-1);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Quick Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
+
+        ClockStart
             c_selectsrt(temp, n);
         ClockEnd
             duration = FindDuration;
@@ -44,6 +51,13 @@ namespace Ki
         ClockEnd
             duration = FindDuration;
         cout << "> Bubble Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
+
+        ClockStart
+            C_HybridQSrt(temp, 0, n-1);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Hybrid Quick Sort: " << duration << " microseconds\n\n";
         free(temp); temp = tmp::vectorray(vec, n);
 
 
