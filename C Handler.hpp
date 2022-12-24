@@ -15,7 +15,7 @@ namespace Ki
 {
     int cmpfunc (const void * a, const void * b)
     {
-        return ( *(int*)a - *(int*)b );
+        return ( *(long long*)a - *(long long*)b );
     }
 
     void CSort(vector <long long> vec, long long n)
@@ -56,6 +56,13 @@ namespace Ki
         ClockEnd
             duration = FindDuration;
         cout << "> Selection Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
+
+        ClockStart
+            C_CountSrt(temp, n);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Counting Sort: " << duration << " microseconds\n\n";
         free(temp); temp = tmp::vectorray(vec, n);
 
         ClockStart

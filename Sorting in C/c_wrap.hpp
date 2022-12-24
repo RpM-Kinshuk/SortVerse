@@ -6,6 +6,7 @@
 #include "c_insertion.h"
 #include "c_mergesrt.h"
 #include "C_qsrt.h"
+#include "c_cntsrt.h"
 /*
 #include <stdio.h>
 #include <stdlib.h>
