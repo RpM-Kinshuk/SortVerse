@@ -23,7 +23,7 @@ int main()
     Ki::InputChoice(a);
 
     (void)!freopen("test/Input Data.txt", "r", stdin);
-    //(void)!freopen("test/Output Data.txt","w",stdout);
+    (void)!freopen("test/Output Data.txt","w",stdout);
 
     vector<long long> vec, temp;
     while (cin >> a)
@@ -37,5 +37,7 @@ int main()
 
     Ki::CSort(vec, n);
 
+    system("python Python_Handler.py");
+    
     return 0;
 }
