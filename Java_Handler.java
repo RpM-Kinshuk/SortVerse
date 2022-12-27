@@ -10,7 +10,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.*;
 
-public class tempmain
+public class Java_Handler
 {
     void bubbleSort(int arr[],int n)
     {
@@ -203,7 +203,7 @@ public class tempmain
                     dynarr.add(sc.nextInt());
                 }
             }
-            
+            System.out.println("\n\n~~~~~~~~~~~ Sorting with Java ~~~~~~~~~~~\n");
             int n = dynarr.size();
             int[] arr = new int[n];
             int[] temp=new int[n];
@@ -212,17 +212,17 @@ public class tempmain
                 arr[i] = dynarr.get(i);
                 temp[i]= dynarr.get(i);
             }
-            tempmain obj=new tempmain();
+            Java_Handler obj=new Java_Handler();
 
         start =System.nanoTime();
         obj.bubbleSort(arr,n);
         end = System.nanoTime();
-        System.out.println("Duration for Bubble Sort "+(end-start)/1000);
-        System.out.println();
-        for(int i=0;i<10;i++)
-        {
-            System.out.print(arr[i]+" ");
-        }
+        System.out.println("> Bubble Sort: "+((end-start)/1000)+" microseconds");
+        //System.out.println();
+        // for(int i=0;i<10;i++)
+        // {
+        //     System.out.print(arr[i]+" ");
+        // }
 
         for(long i=0;i<n;i++)
         {
@@ -233,7 +233,7 @@ public class tempmain
         start =System.nanoTime();
         obj.countSort(temp, n);
         end = System.nanoTime();
-        System.out.println("Duration for Count Sort "+(end-start)/1000);
+        System.out.println("> Count Sort: "+((end-start)/1000)+" microseconds");
         System.out.println();
         
         for(long i=0;i<n;i++)
@@ -244,7 +244,7 @@ public class tempmain
         start =System.nanoTime();
         obj.mergeSort(temp, 0, n-1);
         end = System.nanoTime();
-        System.out.println("Duration for Merge Sort "+(end-start)/1000);
+        System.out.println("> Merge Sort: "+((end-start)/1000)+" microseconds");
         System.out.println();
         
         for(long i=0;i<n;i++)
@@ -255,7 +255,7 @@ public class tempmain
         start =System.nanoTime();
         obj.insertionSort(temp, n);
         end = System.nanoTime();
-        System.out.println("Duration for Insertion Sort "+(end-start)/1000);
+        System.out.println("> Insertion Sort: "+((end-start)/1000)+" microseconds");
         System.out.println();
         
         for(long i=0;i<n;i++)
@@ -266,7 +266,7 @@ public class tempmain
         start =System.nanoTime();
         obj.selectionSort(temp, n);
         end = System.nanoTime();
-        System.out.println("Duration for Selection Sort "+(end-start)/1000);
+        System.out.println("> Selection Sort: "+((end-start)/1000)+" microseconds");
         System.out.println();
         
         for(long i=0;i<n;i++)
@@ -278,8 +278,11 @@ public class tempmain
         start =System.nanoTime();
         obj.quick(temp, 0, n-1);
         end = System.nanoTime();
-        System.out.println("Duration for Quick Sort "+(end-start)/1000);
+        System.out.println("> Quick Sort: "+((end-start)/1000)+" microseconds");
         System.out.println();
+
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
         }
         catch (IOException e) 

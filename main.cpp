@@ -39,5 +39,8 @@ int main()
 
     system("python Python_Handler.py");
     
+    system("javac Java_Handler.java");
+    system("java Java_Handler");
+    
     return 0;
 }
