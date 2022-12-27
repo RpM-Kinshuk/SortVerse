@@ -12,11 +12,11 @@ public void bubbleSort(long arr[],long n)
         int flag=0;
         for(j=0;j<n-i-1;j++)
         {
-            if(arr[j]>arr[j+1])
+            if(arr[(int)j]>arr[(int)j+1])
             {
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
+                temp=arr[(int)j];
+                arr[(int)j]=arr[(int)j+1];
+                arr[(int)j+1]=temp;
 
                 flag=1;
             }
