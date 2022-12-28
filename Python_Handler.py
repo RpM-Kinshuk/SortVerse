@@ -19,7 +19,7 @@ vec = [int(z) for z in sys.stdin.read().split()]
 temp = vec.copy()
 n = len(vec)
 
-print("\n\n~~~~~~~~~~~ Sorting with Python ~~~~~~~~~~~\n")
+print("\n~~~~~~~~~~~ Sorting with Python ~~~~~~~~~~~\n")
 
 # gc.disable()
 st = time.perf_counter_ns()
@@ -91,7 +91,7 @@ en = time.perf_counter_ns()
 print("> Hybrid Quick Sort: ", int(((en-st)//(10**3)) % (10**8)), " microseconds\n")
 temp = vec.copy()
 
-print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
 
 # arr = [-2, 45, 0, 11, -9,88,-97,-202,747]

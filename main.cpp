@@ -16,14 +16,14 @@ using std::vector;
 
 int main()
 {
-    cout << "\n";
+    cout << "\n\n";
     long long a = 3, n = 0;
 
     CHOICE
     Ki::InputChoice(a);
 
     (void)!freopen("test/Input Data.txt", "r", stdin);
-    //(void)!freopen("test/Output Data.txt","w",stdout);
+    //(void)!freopen("test/Output Data.txt","a",stdout);
 
     vector<long long> vec, temp;
     while (cin >> a)
@@ -33,14 +33,14 @@ int main()
     n = vec.size();
     temp = vec;
 
-    Ki::CPPSort(vec, n, temp);
-
     Ki::CSort(vec, n);
 
-    system("python Python_Handler.py");
-    
+    Ki::CPPSort(vec, n, temp);
+
     system("javac Java_Handler.java");
     system("java Java_Handler");
+    
+    system("python Python_Handler.py");
     
     return 0;
 }
