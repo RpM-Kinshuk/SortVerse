@@ -40,6 +40,21 @@ namespace tmp
             j++;
         }
     }
+
+    void InsSort(vector<long long> &arr, long long l, long long r)
+    {
+        for (long long i = l + 1; i <= r; i++)
+        {
+            long long curr = arr[i];
+            long long j = i;
+            while (j > l && arr[j - 1] > curr)
+            {
+                arr[j] = arr[j - 1];
+                j--;
+            }
+            arr[j] = curr;
+        }
+    }
 }
 namespace Ki
 {
@@ -47,6 +62,11 @@ namespace Ki
     {
         if (l < r)
         {
+            if (r - l + 1 < 10)
+            {
+                tmp::InsSort(arr, l, r);
+                return;
+            }
             long long mid = (l + r) / 2;
             MergeSort(arr, l, mid);
             MergeSort(arr, mid + 1, r);
