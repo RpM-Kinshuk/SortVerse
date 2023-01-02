@@ -41,7 +41,7 @@ namespace tmp
         }
     }
 
-    void InsSort(vector<long long> &arr, long long l, long long r)
+    void InSort(vector<long long> &arr, long long l, long long r)
     {
         for (long long i = l + 1; i <= r; i++)
         {
@@ -64,7 +64,7 @@ namespace Ki
         {
             if (r - l + 1 < 10)
             {
-                tmp::InsSort(arr, l, r);
+                tmp::InSort(arr, l, r);
                 return;
             }
             long long mid = (l + r) / 2;
