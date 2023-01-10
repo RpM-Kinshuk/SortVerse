@@ -6,3 +6,4 @@
 #include "DNF Sort.hpp"
 #include "Count Sort.hpp"
 #include "Wave Sort.hpp"
+#include "Heap Sort.hpp"

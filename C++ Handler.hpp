@@ -73,14 +73,16 @@ namespace Ki
         temp = vec;
         cout << "> Hybrid Quick Sort: " << duration << " microseconds\n\n";
 
+        ClockStart
+            Ki::HeapSort(temp, n);
+        ClockEnd
+            duration = FindDuration;
+        temp = vec;
+        cout << "Heap Sort: " << duration << " microseconds\n\n";
+
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
 }
-// ClockStart
-// Ki::HeapSort(temp,n);
-// ClockEnd
-// duration = FindDuration; temp = vec;
-// cout << "Heap Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::RadixSort(temp,n);
