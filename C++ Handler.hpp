@@ -78,7 +78,7 @@ namespace Ki
         ClockEnd
             duration = FindDuration;
         temp = vec;
-        cout << "Heap Sort: " << duration << " microseconds\n\n";
+        cout << "> Heap Sort: " << duration << " microseconds\n\n";
 
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
@@ -88,88 +88,88 @@ namespace Ki
 // Ki::RadixSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Radix Sort: " << duration << " microseconds\n\n";
+// cout << "> Radix Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::BucketSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Bucket Sort: " << duration << " microseconds\n\n";
+// cout << "> Bucket Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::ShellSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Shell Sort: " << duration << " microseconds\n\n";
+// cout << "> Shell Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::CombSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Comb Sort: " << duration << " microseconds\n\n";
+// cout << "> Comb Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::CycleSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Cycle Sort: " << duration << " microseconds\n\n";
+// cout << "> Cycle Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::PigeonholeSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Pigeonhole Sort: " << duration << " microseconds\n\n";
+// cout << "> Pigeonhole Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::GnomeSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Gnome Sort: " << duration << " microseconds\n\n";
+// cout << "> Gnome Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::BitonicSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Bitonic Sort: " << duration << " microseconds\n\n";
+// cout << "> Bitonic Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::PancakeSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Pancake Sort: " << duration << " microseconds\n\n";
+// cout << "> Pancake Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::BogoSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Bogo Sort: " << duration << " microseconds\n\n";
+// cout << "> Bogo Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::StoogeSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Stooge Sort: " << duration << " microseconds\n\n";
+// cout << "> Stooge Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::TimSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Tim Sort: " << duration << " microseconds\n\n";
+// cout << "> Tim Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::SmoothSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Smooth Sort: " << duration << " microseconds\n\n";
+// cout << "> Smooth Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::IntroSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Intro Sort: " << duration << " microseconds\n\n";
+// cout << "> Intro Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::BlockSort(temp,n);
 // ClockEnd
 // duration = FindDuration; temp = vec;
-// cout << "Block Sort: " << duration << " microseconds\n\n";
+// cout << "> Block Sort: " << duration << " microseconds\n\n";
