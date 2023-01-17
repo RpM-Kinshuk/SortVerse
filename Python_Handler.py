@@ -8,6 +8,7 @@ from Sorting_in_Python.insertion import *
 from Sorting_in_Python.qsort import *
 from Sorting_in_Python.mergesrt import *
 from Sorting_in_Python.countsrt import *
+from Sorting_in_Python.dnfsrt import *
 
 os.chdir('test/')
 # inf = open('Input Data.txt','r')
