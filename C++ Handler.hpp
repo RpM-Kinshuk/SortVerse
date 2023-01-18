@@ -80,15 +80,16 @@ namespace Ki
         temp = vec;
         cout << "> Heap Sort: " << duration << " microseconds\n\n";
 
+        ClockStart
+        Ki::RadixSort(temp,n);
+        ClockEnd
+        duration = FindDuration; temp = vec;
+        cout << "> Radix Sort: " << duration << " microseconds\n\n";
+
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
 }
 
-// ClockStart
-// Ki::RadixSort(temp,n);
-// ClockEnd
-// duration = FindDuration; temp = vec;
-// cout << "> Radix Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::BucketSort(temp,n);
