@@ -79,6 +79,12 @@ namespace Ki
         cout << "> Hybrid Quick Sort: " << duration << " microseconds\n\n";
         free(temp); temp = tmp::vectorray(vec, n);
 
+        ClockStart
+            C_HeapSort(temp, n);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Heap Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
 
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }

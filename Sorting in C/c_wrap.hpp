@@ -9,6 +9,7 @@
 #include "c_cntsrt.h"
 #include "c_wavesrt.h"
 #include "c_dnf.h"
+#include "c_heapsrt.h"
 /*
 #include <stdio.h>
 #include <stdlib.h>
