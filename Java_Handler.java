@@ -10,6 +10,8 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import Sorting_in_Java.*;
+
 public class Java_Handler {
     void bubbleSort(int arr[],int n)
     {

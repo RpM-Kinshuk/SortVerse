@@ -1,3 +1,4 @@
+package Sorting_in_Java;
 public class Merge {
     public void merge(int a[], int beg, int mid, int end) {
         int i, j, k;

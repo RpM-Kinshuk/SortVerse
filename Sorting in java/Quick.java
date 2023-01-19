@@ -1,3 +1,4 @@
+package Sorting_in_Java;
 public class Quick
 {
     public int partition(int a[], int start, int end) {
