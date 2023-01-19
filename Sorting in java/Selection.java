@@ -1,7 +1,5 @@
-package bpack;
-
 public class Selection {
-    void selectionSort(int arr[], int n) {
+    public void selectionSort(int arr[], int n) {
         int i, j;
         int temp = 0;
         for (i = 0; i < n - 1; i++) {

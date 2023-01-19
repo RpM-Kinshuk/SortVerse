@@ -1,7 +1,5 @@
-package bpack;
-
 public class Heap {
-    void heapify(int arr[], int n, int i) {
+    public void heapify(int arr[], int n, int i) {
         int mx = i;
         int lcl = 2 * i + 1;
         int rcl = 2 * i + 2;
@@ -23,7 +21,7 @@ public class Heap {
         }
     }
 
-    void HeapSort(int arr[], int n) {
+    public void HeapSort(int arr[], int n) {
         for (int i = n / 2; i >= 0; i--) {
             heapify(arr, n, i);
         }

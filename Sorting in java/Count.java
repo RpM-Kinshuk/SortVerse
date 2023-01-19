@@ -1,10 +1,6 @@
-package bpack;
-/*import java.util.*;
-class Count
-{*/
 public class Count
 {
-    void countSort(int arr[], int n) {
+    public void countSort(int arr[], int n) {
         int mx = arr[0], mn = arr[0];
         int f[] = new int[n];
         for (int i = 0; i < n; i++)

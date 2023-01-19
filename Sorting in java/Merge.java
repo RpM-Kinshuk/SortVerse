@@ -1,7 +1,5 @@
-package bpack;
-
 public class Merge {
-    void merge(int a[], int beg, int mid, int end) {
+    public void merge(int a[], int beg, int mid, int end) {
         int i, j, k;
         int n1 = mid - beg + 1;
         int n2 = end - mid;

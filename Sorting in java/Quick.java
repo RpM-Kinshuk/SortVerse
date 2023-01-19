@@ -1,7 +1,6 @@
-package bpack;
 public class Quick
 {
-    int partition(int a[], int start, int end) {
+    public int partition(int a[], int start, int end) {
         int pivot = a[end];
         int i = (start - 1);
 
@@ -19,11 +18,11 @@ public class Quick
         return (i + 1);
     }
 
-    void quick(int a[], int start, int end) {
+    public void quicksort(int a[], int start, int end) {
         if (start < end) {
             int p = partition(a, start, end);
-            quick(a, start, p - 1);
-            quick(a, p + 1, end);
+            quicksort(a, start, p - 1);
+            quicksort(a, p + 1, end);
         }
 
     }
