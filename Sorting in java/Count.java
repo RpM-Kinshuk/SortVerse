@@ -1,43 +1,36 @@
-package cpack;
+package bpack;
 /*import java.util.*;
 class Count
 {*/
 public class Count
 {
-void countSort( long arr[],long n)
-{
-     long i=0;
-    long max=0;
-    long f[]=new long [n];
-    for(i=0;i<n;i++)
-    {
-        if(arr[i]>max)
+    void countSort(int arr[], int n) {
+        int mx = arr[0], mn = arr[0];
+        int f[] = new int[n];
+        for (int i = 0; i < n; i++)
         {
-            max=arr[i];
+            mx = (mx > arr[i]) ? mx : arr[i];
+            mn = (mn < arr[i]) ? mn : arr[i];
+        }
+        int range = mx - mn + 1;
+        int cnt[] = new int[range];
+        for (int i = 0; i < n; i++)
+        {
+            cnt[arr[i] - mn]++;
+        }
+        for (int i = 1; i < range; i++)
+        {
+            cnt[i] += cnt[i - 1];
+        }
+        for (int i = n - 1; i >= 0; i--)
+        {
+            f[--cnt[arr[i] - mn]] = arr[i];
+        }
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = f[i];
         }
     }
-    long cnt[]=new long [max+1];
-     for(i=0;i<max;i++)
-     {
-        cnt[i]=0;
-     }
-    for(i=0;i<n;i++)
-    {
-        cnt[arr[i]]++;
-    }
-    for(i=1;i<max+1;i++)
-    {
-        cnt[i]=cnt[i]+cnt[i-1];
-    }
-    for(i=n-1;i>=0;i--)
-    {
-        f[--cnt[arr[i]]]=arr[i];
-    }
-    for(i=0;i<n;i++)
-    {
-        arr[i]=f[i];
-    }
-}
 }
 /*public static void main(String args[])
 {
