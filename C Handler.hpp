@@ -86,6 +86,20 @@ namespace Ki
         cout << "> Heap Sort: " << duration << " microseconds\n\n";
         free(temp); temp = tmp::vectorray(vec, n);
 
+        ClockStart
+            C_RdxSrt(temp, n);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Radix Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
+        
+        ClockStart
+            C_ShellSrt(temp, n);
+        ClockEnd
+            duration = FindDuration;
+        cout << "> Shell Sort: " << duration << " microseconds\n\n";
+        free(temp); temp = tmp::vectorray(vec, n);
+
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
 }
