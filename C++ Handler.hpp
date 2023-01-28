@@ -86,6 +86,12 @@ namespace Ki
         duration = FindDuration; temp = vec;
         cout << "> Radix Sort: " << duration << " microseconds\n\n";
 
+        ClockStart
+        Ki::ShellSort(temp,n);
+        ClockEnd
+        duration = FindDuration; temp = vec;
+        cout << "> Shell Sort: " << duration << " microseconds\n\n";
+
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
     }
 }
@@ -96,12 +102,6 @@ namespace Ki
 // ClockEnd
 // duration = FindDuration; temp = vec;
 // cout << "> Bucket Sort: " << duration << " microseconds\n\n";
-
-// ClockStart
-// Ki::ShellSort(temp,n);
-// ClockEnd
-// duration = FindDuration; temp = vec;
-// cout << "> Shell Sort: " << duration << " microseconds\n\n";
 
 // ClockStart
 // Ki::CombSort(temp,n);

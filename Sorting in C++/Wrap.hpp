@@ -8,3 +8,4 @@
 #include "Wave Sort.hpp"
 #include "Heap Sort.hpp"
 #include "Radix Sort.hpp"
+#include "Shell Sort.hpp"
