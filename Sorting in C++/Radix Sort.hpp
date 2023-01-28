@@ -23,7 +23,7 @@ namespace tmp
         v = output;
     }
 
-    long long Max(vector<long long> v, long long n)
+    long long Max(vector<long long> &v, long long &n)
     {
         long long mx = v[0];
         for (int i = 1; i < n; i++)
