@@ -253,7 +253,70 @@ public class Java_Handler {
             heapify(arr, i, 0);
         }
     }
+    
+    void CountSort(int v[], int n, int dig)
+    {
+        int output[] = new int[n];
+        int i;
+        int count[] = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        for(i=0;i<n;i++)
+        {
+            count[(v[i]/dig)%10+10]++;
+        }
+        for(i=1;i<20;i++)
+        {
+            count[i] += count[i-1];
+        }
+        for(i=n-1;i>=0;i--)
+        {
+            output[count[(v[i]/dig)%10+10]-1] = v[i];
+            count[(v[i]/dig)%10+10]--;
+        }
+        for(i=0;i<n;i++)
+        {
+            v[i] = output[i];
+        }
+    }
 
+    int Max(int v[], int n)
+    {
+        int mx = v[0];
+        for (int i = 1; i < n; i++)
+        {
+            if (v[i] > mx)
+            {
+                mx = v[i];
+            }
+        }
+        return mx;
+    }
+
+    void RadixSort(int v[], int n)
+    {
+        int mx = Max(v,n);
+        for(int dig = 1; mx/dig > 0; dig *= 10)
+        {
+            CountSort(v,n,dig);
+        }
+    }
+    
+    public void ShellSort(int v[], int n)
+    {
+        for (int sp = n / 2; sp > 0; sp /= 2)
+        {
+            for (int i = sp; i < n; i++)
+            {
+                int tmp = v[i];
+                int j = 0;
+                for (j = i; j >= sp && v[j - sp] > tmp; j -= sp)
+                {
+                    v[j] = v[j - sp];
+                }
+                v[j] = tmp;
+            }
+        }
+    }
+    
     public static void main(String[] args) {
         try {
             System.out.println("\n~~~~~~~~~~~~ Sorting with Java ~~~~~~~~~~~~\n");
@@ -351,6 +414,24 @@ public class Java_Handler {
             obj.HeapSort(arr, n);
             end = System.nanoTime();
             System.out.println("> Heap Sort: " + ((end - start) / 1000) + " microseconds\n");
+
+            for (long i = 0; i < n; i++) {
+                temp[(int) i] = arr[(int) i];
+            }
+            
+            start = System.nanoTime();
+            obj.RadixSort(arr, n)
+            end = System.nanoTime();
+            System.out.println("> Radix Sort: " + ((end - start) / 1000) + " microseconds\n");
+
+            for (long i = 0; i < n; i++) {
+                temp[(int) i] = arr[(int) i];
+            }
+            
+            start = System.nanoTime();
+            obj.ShellSort(v, n)
+            end = System.nanoTime();
+            System.out.println("> Shell Sort: " + ((end - start) / 1000) + " microseconds\n");
 
             for (long i = 0; i < n; i++) {
                 temp[(int) i] = arr[(int) i];
