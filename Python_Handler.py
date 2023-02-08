@@ -101,7 +101,7 @@ st = time.perf_counter_ns()
 py_heapsrt(temp, n)
 en = time.perf_counter_ns()
 # gc.enable()
-print("> Heap Quick Sort: ", int(((en-st)//(10**3)) % (10**8)), " microseconds\n")
+print("> Heap Sort: ", int(((en-st)//(10**3)) % (10**8)), " microseconds\n")
 temp = vec.copy()
 
 # gc.disable()
