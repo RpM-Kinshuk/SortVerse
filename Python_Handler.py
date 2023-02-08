@@ -10,6 +10,9 @@ from Sorting_in_Python.mergesrt import *
 from Sorting_in_Python.countsrt import *
 from Sorting_in_Python.dnfsrt import *
 from Sorting_in_Python.wavesrt import *
+from Sorting_in_Python.radixsrt import *
+from Sorting_in_Python.heapsrt import *
+from Sorting_in_Python.shellsrt import *
 
 os.chdir('test/')
 # inf = open('Input Data.txt','r')
@@ -91,6 +94,30 @@ hy_qsort(temp, 0, n-1)
 en = time.perf_counter_ns()
 # gc.enable()
 print("> Hybrid Quick Sort: ", int(((en-st)//(10**3)) % (10**8)), " microseconds\n")
+temp = vec.copy()
+
+# gc.disable()
+st = time.perf_counter_ns()
+py_heapsrt(temp, n)
+en = time.perf_counter_ns()
+# gc.enable()
+print("> Heap Quick Sort: ", int(((en-st)//(10**3)) % (10**8)), " microseconds\n")
+temp = vec.copy()
+
+# gc.disable()
+st = time.perf_counter_ns()
+Py_radixsrt(temp, n)
+en = time.perf_counter_ns()
+# gc.enable()
+print("> Radix Sort: ", int(((en-st)//(10**3)) % (10**8)), " microseconds\n")
+temp = vec.copy()
+
+# gc.disable()
+st = time.perf_counter_ns()
+shellsrt(temp, n)
+en = time.perf_counter_ns()
+# gc.enable()
+print("> Shell Sort: ", int(((en-st)//(10**3)) % (10**8)), " microseconds\n")
 temp = vec.copy()
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
