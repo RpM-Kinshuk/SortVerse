@@ -338,6 +338,15 @@ public class Java_Handler {
                 temp[(int) i] = arr[(int) i];
             }
             
+              start = System.nanoTime();
+            obj.HybridQuickSort(arr, 0, n-1);
+            end = System.nanoTime();
+            System.out.println("> Hybrid Quick Sort: " + ((end - start) / 1000) + " microseconds\n");
+            
+            for (long i = 0; i < n; i++) {
+                temp[(int) i] = arr[(int) i];
+            }
+            
             start = System.nanoTime();
             obj.HeapSort(arr, n);
             end = System.nanoTime();
@@ -347,14 +356,6 @@ public class Java_Handler {
                 temp[(int) i] = arr[(int) i];
             }
             
-            start = System.nanoTime();
-            obj.HybridQuickSort(arr, 0, n-1);
-            end = System.nanoTime();
-            System.out.println("> Hybrid Quick Sort: " + ((end - start) / 1000) + " microseconds\n");
-            
-            for (long i = 0; i < n; i++) {
-                temp[(int) i] = arr[(int) i];
-            }
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
         } catch (IOException e) {
