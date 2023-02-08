@@ -393,7 +393,7 @@ public class Java_Handler {
             }
 
             start = System.nanoTime();
-            obj.bubbleSort(arr, n);
+            obj.bubbleSort(temp, n);
             end = System.nanoTime();
             System.out.println("> Bubble Sort: " + ((end - start) / 1000) + " microseconds\n");
 
@@ -402,7 +402,7 @@ public class Java_Handler {
             }
             
               start = System.nanoTime();
-            obj.HybridQuickSort(arr, 0, n-1);
+            obj.HybridQuickSort(temp, 0, n-1);
             end = System.nanoTime();
             System.out.println("> Hybrid Quick Sort: " + ((end - start) / 1000) + " microseconds\n");
             
@@ -411,7 +411,7 @@ public class Java_Handler {
             }
             
             start = System.nanoTime();
-            obj.HeapSort(arr, n);
+            obj.HeapSort(temp, n);
             end = System.nanoTime();
             System.out.println("> Heap Sort: " + ((end - start) / 1000) + " microseconds\n");
 
@@ -420,7 +420,7 @@ public class Java_Handler {
             }
             
             start = System.nanoTime();
-            obj.RadixSort(arr, n);
+            obj.RadixSort(temp, n);
             end = System.nanoTime();
             System.out.println("> Radix Sort: " + ((end - start) / 1000) + " microseconds\n");
 
@@ -429,7 +429,7 @@ public class Java_Handler {
             }
             
             start = System.nanoTime();
-            obj.ShellSort(v, n);
+            obj.ShellSort(temp, n);
             end = System.nanoTime();
             System.out.println("> Shell Sort: " + ((end - start) / 1000) + " microseconds\n");
 
