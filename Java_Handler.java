@@ -144,8 +144,8 @@ public class Java_Handler {
     void quickSort(int a[], int start, int end) {
         if (start < end) {
             int p = partition(a, start, end);
-            quick(a, start, p - 1);
-            quick(a, p + 1, end);
+            quickSort(a, start, p - 1);
+            quickSort(a, p + 1, end);
         }
 
     }
