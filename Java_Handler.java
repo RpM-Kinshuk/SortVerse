@@ -420,7 +420,7 @@ public class Java_Handler {
             }
             
             start = System.nanoTime();
-            obj.RadixSort(arr, n)
+            obj.RadixSort(arr, n);
             end = System.nanoTime();
             System.out.println("> Radix Sort: " + ((end - start) / 1000) + " microseconds\n");
 
@@ -429,7 +429,7 @@ public class Java_Handler {
             }
             
             start = System.nanoTime();
-            obj.ShellSort(v, n)
+            obj.ShellSort(v, n);
             end = System.nanoTime();
             System.out.println("> Shell Sort: " + ((end - start) / 1000) + " microseconds\n");
 
