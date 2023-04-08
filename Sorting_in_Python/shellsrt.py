@@ -1,5 +1,6 @@
 def shellsrt(v, n):
-    for sp in range(n//2, -1, -1):
+    sp = n//2
+    while sp > 0:
         for i in range(sp, n):
             tmp = v[i]
             j = i
@@ -7,3 +8,4 @@ def shellsrt(v, n):
                 v[j] = v[j-sp]
                 j -= sp
             v[j] = tmp
+        sp //= 2
