@@ -41,7 +41,7 @@ class TrackedArray:
 
     def __delitem__(self, key):
         self.track(key, "del")
-        self.arr.__delitem__(key)
+        self.arr.__delitem__(key) # type: ignore
 
     def __len__(self):
         return self.arr.__len__()
@@ -62,8 +62,10 @@ sorting_algorithms = [
     "Insertion Sort",
     "Merge Sort",
     "Wave Sort",
-    "Radix Sort",
+    "Hybrid QSort",
     "Shell Sort",
+    "Radix Sort",
+    "DNF Sort",
 ]
 speed = {"Slow": 15, "Medium": 90, "Fast": 360, "Superfast": 720}
 sorting_algorithm = "None"
@@ -171,15 +173,24 @@ def py_visualizer(FPS, N, sorting_algorithm):
     # np.random.seed(0)
     np.random.shuffle(arr)
     # print(arr)
+
+    if sorting_algorithm == "DNF Sort":
+        for i in range(0, len(arr)):
+            if arr[i] < 333:
+                arr[i] = 333
+            elif arr[i] < 666:
+                arr[i] = 666
+            else:
+                arr[i] = 999
+
     arr = TrackedArray(arr)
     # print(arr)
 
     fig, ax = plt.subplots(figsize=(16, 8))
-
     fig.suptitle(f"{sorting_algorithm}")
-    container = ax.bar(np.arange(0, len(arr), 1), arr, align="edge", width=0.8)
+    container = ax.bar(np.arange(0, len(arr), 1), arr, align="edge", width=0.8)  # type: ignore
     ax.set(xlabel="Index", ylabel="Value")
-    ax.set_xlim([0, N])
+    ax.set_xlim([0, N])  # type: ignore
 
     if sorting_algorithm == "Bubble Sort":
         py_bubble(arr, len(arr))
@@ -195,12 +206,16 @@ def py_visualizer(FPS, N, sorting_algorithm):
         py_insertionsrt(arr, len(arr))
     elif sorting_algorithm == "Merge Sort":
         py_mrgsrt(arr, 0, len(arr) - 1)
-    elif sorting_algorithm == "Dutch National Flag Sort":
-        py_DNFsrt(arr, len(arr))
+    elif sorting_algorithm == "DNF Sort":
+        py_visual_DNFsrt(arr, len(arr))
     elif sorting_algorithm == "Wave Sort":
         py_wavesrt(arr, len(arr))
     elif sorting_algorithm == "Shell Sort":
         py_shellsrt(arr, len(arr))
+    elif sorting_algorithm == "Radix Sort":
+        py_radixsrt(arr, len(arr))
+    elif sorting_algorithm == "Hybrid QSort":
+        hy_qsort(arr, 0, len(arr) - 1)
 
     def update(frame):
         for i, (rectangle, height) in enumerate(
@@ -225,7 +240,7 @@ def py_visualizer(FPS, N, sorting_algorithm):
         repeat=False,
     )
 
-    container = ax.bar(np.arange(0, len(arr), 1), align="edge", width=0.8, height=arr)
+    container = ax.bar(np.arange(0, len(arr), 1), align="edge", width=0.8, height=arr) # type: ignore
     plt.show()
 
 
