@@ -80,8 +80,8 @@ def var_gui():
         sp = str(selectfps.get())
         if sp != "":
             FPS = speed[sp]
-        print("\n\nSelected value:", sorting_algorithm)
-        print("Selected FPS:", FPS, "\n\n")
+        print("\n\nSelected Algo:", sorting_algorithm)
+        print("Selected Framerate:", FPS, "\n\n")
         window.destroy()  # Close the window
 
     window = tk.Tk()
