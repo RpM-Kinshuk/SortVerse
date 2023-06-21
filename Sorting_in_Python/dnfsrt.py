@@ -1,4 +1,4 @@
-def DNFsrt(arr, n):
+def py_DNFsrt(arr, n):
     low = 0
     mid = 0
     high = n-1

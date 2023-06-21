@@ -1,4 +1,4 @@
-def shellsrt(v, n):
+def py_shellsrt(v, n):
     sp = n//2
     while sp > 0:
         for i in range(sp, n):

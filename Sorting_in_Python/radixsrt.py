@@ -20,7 +20,7 @@ def Max(v, n):
     return mx
 
 
-def Py_radixsrt(v, n):
+def py_radixsrt(v, n):
     mx = Max(v, n)
     dig = 1
     while (mx//dig > 0):

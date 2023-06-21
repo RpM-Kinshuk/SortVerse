@@ -1,4 +1,4 @@
-def py_selectionSort(arr, n):
+def py_selectionsrt(arr, n):
     for i in range(n):
         min_idx = i
         for j in range(i + 1, n):
