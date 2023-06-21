@@ -67,7 +67,7 @@ sorting_algorithms = [
     "Radix Sort",
     "DNF Sort",
 ]
-speed = {"Slow": 15, "Medium": 90, "Fast": 360, "Superfast": 720}
+speed = {"Slow": 15, "Medium": 120, "Fast": 240, "Superfast": 1000}
 sorting_algorithm = "None"
 FPS = speed["Medium"]
 N = 50
@@ -85,16 +85,16 @@ def var_gui():
         window.destroy()  # Close the window
 
     window = tk.Tk()
-    window.title("SortVerse Algorithm and Speed")
-    # Set the window width and length
+    window.title("SortVerse Visualizer")
+
     window_width = 375
-    window_length = 500
-    # Calculate the centered position of the window on the screen
+    window_length = 550
+
     screen_width = window.winfo_screenwidth()
     screen_height = window.winfo_screenheight()
     x = (screen_width - window_width) // 2
     y = (screen_height - window_length) // 2
-    # Set the window geometry
+
     window.geometry(f"{window_width}x{window_length}+{x}+{y}")
 
     style = ttk.Style()
@@ -162,9 +162,6 @@ def var_gui():
     window.mainloop()
 
 
-var_gui()
-
-
 def py_visualizer(FPS, N, sorting_algorithm):
     if sorting_algorithm == "None":
         print("\n\nPlease select an algorithm!\n\n")
@@ -187,7 +184,7 @@ def py_visualizer(FPS, N, sorting_algorithm):
     # print(arr)
 
     fig, ax = plt.subplots(figsize=(16, 8))
-    fig.suptitle(f"{sorting_algorithm}")
+    fig.suptitle('SortVerse Visualizer')
     container = ax.bar(np.arange(0, len(arr), 1), arr, align="edge", width=0.8)  # type: ignore
     ax.set(xlabel="Index", ylabel="Value")
     ax.set_xlim([0, N])  # type: ignore
@@ -241,7 +238,13 @@ def py_visualizer(FPS, N, sorting_algorithm):
     )
 
     container = ax.bar(np.arange(0, len(arr), 1), align="edge", width=0.8, height=arr) # type: ignore
+    plt.title(f'{sorting_algorithm}')
     plt.show()
 
+def main():
+    var_gui()
+    py_visualizer(FPS, N, sorting_algorithm)
 
-py_visualizer(FPS, N, sorting_algorithm)
+#main function
+if __name__ == '__main__':
+    main()
