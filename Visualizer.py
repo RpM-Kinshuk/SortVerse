@@ -4,9 +4,9 @@ import matplotlib.animation as animation
 from Python_Handler import *
 import tkinter as tk
 from tkinter import ttk
+import subprocess
 
 # plt.style.use('dark_background')
-
 
 class TrackedArray:
     def __init__(self, arr):
@@ -81,7 +81,7 @@ def var_gui():
         if sp != "":
             FPS = speed[sp]
         print("\n\nSelected Algo:", sorting_algorithm)
-        print("Selected Framerate:", FPS, "\n\n")
+        print("Selected Framerate:", FPS)
         window.destroy()  # Close the window
 
     window = tk.Tk()
@@ -241,16 +241,29 @@ def py_visualizer(FPS, N, sorting_algorithm):
     plt.title(f'{sorting_algorithm}')
     plt.show()
 
+
 def main():
+    requirements = ["numpy", "matplotlib"]
+    for requirement in requirements:
+        subprocess.check_call(["pip", "install", requirement])
+    if os.name == 'nt':
+        os.system('cls')  # For Windows
+    else:
+        os.system('clear')  # For Linux and macOS
+    
     var_gui()
+
+    st = time.perf_counter_ns()
     py_visualizer(FPS, N, sorting_algorithm)
+    en = time.perf_counter_ns()
+    print("Time utilised:", int(((en-st)//(10**9)) % (10**9)), "seconds\n")
+    
+    print('\nThank you for using SortVerse!\n')
+    print('Made with ❤️  by:')
+    print('🏃 [ Kinshuk Goel ]')
+    print('💃 [ Palak Dwivedi ]')
+    input('\n\nPress any key to exit...')
 
-    print('Thank you for using SortVerse!\n')
-    print('Made with ♥ by:')
-    print(' ☺ [ Kinshuk Goel ]')
-    print(' ☻ [ Palak Dwivedi ]')
-    input('\nPress any key to exit...')
 
-#main function
 if __name__ == '__main__':
     main()
