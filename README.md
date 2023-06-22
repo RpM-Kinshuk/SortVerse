@@ -1,4 +1,4 @@
-# **Sorting-Algos**
+# **SortVerse**
 **A research project comparing various sorting techniques and their optimizations across different languages in an attempt to highlight the best use cases for each.**
 
 The project contains performance analysis of **10 major sorting algorithms** across **C**, **C++**, **Java** and **Python**.
