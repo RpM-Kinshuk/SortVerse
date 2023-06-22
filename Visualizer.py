@@ -76,7 +76,9 @@ N = 50
 def var_gui():
     def set_variables():
         global sorting_algorithm, FPS
-        sorting_algorithm = selectalgo.get()
+        st = str(selectalgo.get())
+        if st != "":
+            sorting_algorithm = selectalgo.get()
         sp = str(selectfps.get())
         if sp != "":
             FPS = speed[sp]
