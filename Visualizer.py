@@ -246,9 +246,9 @@ def main():
     py_visualizer(FPS, N, sorting_algorithm)
 
     print('Thank you for using SortVerse!\n')
-    print('Made with ❤️  by:')
-    print('🏃 [ Kinshuk Goel ]')
-    print('💃 [ Palak Dwivedi ]')
+    print('Made with ♥ by:')
+    print(' ☺ [ Kinshuk Goel ]')
+    print(' ☻ [ Palak Dwivedi ]')
     input('\nPress any key to exit...')
 
 #main function
