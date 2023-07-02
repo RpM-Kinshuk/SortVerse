@@ -1,6 +1,17 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+plt.rcParams["figure.figsize"] = [7.00, 7.00]
+plt.rcParams["figure.autolayout"] = True
+x = [10, 100, 1000, 10000, 100000, 1000000]
+x_ticks = range(len(x))
+
+def xticks():
+    plt.xticks(x_ticks, x)
+
+def ylm():
+    plt.ylim(5, 5e4)
+
 #Plot for Java
 
 y1 = np.array([482, 358, 970,5202, 46152,116218])
@@ -15,8 +26,8 @@ y9 = np.array([74,7,682,4432,28327,163092])
 y = np.array([53,15,638,3489,18437,107633])
 y0 = np.array([31,5,510,8305,15634,145878])
 
-plt.xlim(0, 5)
-plt.ylim(5, 100000)
+xticks()
+ylm()
 
 plt.plot(y,color='black',label='Radix')
 plt.plot(y0,color='blue',label='Shell')
@@ -51,8 +62,8 @@ y9 = np.array([1,9,105,1669,17796,252654])
 y = np.array([2,8,75,784,7922,54762])
 y0 = np.array([0,5,85,1480,19107,124359])
 
-plt.xlim(0, 5)
-plt.ylim(5, 100000)
+xticks()
+ylm()
 
 plt.plot(y,color='black',label='Radix')
 plt.plot(y0,color='blue',label='Shell')
@@ -87,8 +98,8 @@ y9 = np.array([1,17,194,3280,34610,178613])
 y = np.array([4,15,115,1130,11069,64414])
 y0 = np.array([0,10,136,2572,32167,128752])
 
-plt.xlim(0, 5)
-plt.ylim(5, 100000)
+xticks()
+ylm()
 
 plt.plot(y,color='black',label='Radix')
 plt.plot(y0,color='blue',label='Shell')
@@ -123,8 +134,8 @@ y9 = np.array([17,199,3106,46508,664555,8108707])
 y = np.array([35,189,1797,18848,275071,3002543])
 y0 = np.array([7,343,43556,4390244,78388133,80671826754])
 
-plt.xlim(0, 5)
-plt.ylim(5, 100000)
+xticks()
+ylm()
 
 plt.plot(y,color='black',label='Radix')
 plt.plot(y0,color='blue',label='Shell')
