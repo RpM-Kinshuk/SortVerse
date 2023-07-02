@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.rcParams["figure.figsize"] = [7.00, 7.00]
+plt.rcParams["figure.figsize"] = [10.00, 7.00]
 plt.rcParams["figure.autolayout"] = True
 x = [10, 100, 1000, 10000, 100000, 1000000]
 x_ticks = range(len(x))
