@@ -12,5 +12,7 @@ It installs it's 2 dependencies i.e. the **NumPy** and **Matplotlib** libraries 
 <br> https://youtu.be/gFRYyZ6eby4
 <br> <br>
 ***Research Findings:***<br>
-![Comparison](https://github.com/RpM-Kinshuk/SortVerse/assets/103813028/5b137641-7130-429a-9386-d4cd17c1c457)
+![Comparison](https://github.com/RpM-Kinshuk/SortVerse/assets/103813028/bd114c13-3398-438e-9105-1a661e8bea21)
 (*Time mentioned in milliseconds*)
+
+
