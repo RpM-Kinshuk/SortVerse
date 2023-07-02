@@ -64,50 +64,23 @@ def add_plt(y_orig):
     ]
 
     if interpolate_data:
-        alpha = 0.7
-        linestyle = "-"
-        marker = "o"
-        x = np.linspace(0, 5, 100)
-
+        x_interp = np.linspace(0, len(x) - 1, 100000)
+        x_orig = np.arange(len(x))
         for i in range(11):
-            y_orig[i] = np.interp(x, np.arange(6), y_orig[i])
-
-        for i in range(11):
+            y_interp = np.interp(x_interp, x_orig, y_orig[i])
             plt.plot(
-                x,
-                y_orig[i],
+                x_interp,
+                y_interp,
                 color=colors[i],
                 label=labels[i],
-                marker=marker,
-                linestyle=linestyle,
-                alpha=alpha,
+                alpha=0.7,
+                linestyle="-",
+                #    marker=".",
             )
 
     else:
         for i in range(11):
             plt.plot(y_orig[i], color=colors[i], label=labels[i])
-
-
-# Combine images
-def combine():
-    c = Image.open("C.png")
-    cplus = Image.open("C++.png")
-    java = Image.open("Java.png")
-    python = Image.open("Python.png")
-    width, height = cplus.size  # Assuming all images have the same dimensions
-    collage_width = width * 2
-    collage_height = height * 2
-    collage = Image.new("RGB", (collage_width, collage_height))
-    collage.paste(c, (0, 0))
-    collage.paste(cplus, (width, 0))
-    collage.paste(java, (0, height))
-    collage.paste(python, (width, height))
-    collage.save("Comparison.png")
-    if remove_orig_img:
-        os.remove("C.png")
-        os.remove("C++.png")
-        os.remove("Java.png")
-        os.remove("Python.png")
 
 
 # Plot for C
@@ -198,4 +171,25 @@ add_plt(y_orig)
 plt_and_save()
 
 if save_img:
+    # Combine images
+    def combine():
+        c = Image.open("C.png")
+        cplus = Image.open("C++.png")
+        java = Image.open("Java.png")
+        python = Image.open("Python.png")
+        width, height = cplus.size  # Assuming all images have the same dimensions
+        collage_width = width * 2
+        collage_height = height * 2
+        collage = Image.new("RGB", (collage_width, collage_height))
+        collage.paste(c, (0, 0))
+        collage.paste(cplus, (width, 0))
+        collage.paste(java, (0, height))
+        collage.paste(python, (width, height))
+        collage.save("Comparison.png")
+        if remove_orig_img:
+            os.remove("C.png")
+            os.remove("C++.png")
+            os.remove("Java.png")
+            os.remove("Python.png")
+
     combine()
