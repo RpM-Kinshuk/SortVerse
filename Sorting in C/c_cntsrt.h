@@ -1,4 +1,6 @@
+#include <stdlib.h>
 #include <string.h>
+
 void C_CountSrt(long long *arr, long long &n)
 {
     long long mx = arr[0], mn = arr[0];
