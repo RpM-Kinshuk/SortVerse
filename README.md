@@ -9,7 +9,7 @@ Furthermore, the project contains a total of **12 sorting algorithms** that can 
 It installs it's 2 dependencies i.e. the **NumPy** and **Matplotlib** libraries before execution and has user defined algorithm and speed choice. <br> <br>
 [![SRT_pj_cmp](https://user-images.githubusercontent.com/103813028/189480103-59d1c24f-39c4-4b20-877a-674b2e35267c.png)](https://youtu.be/gFRYyZ6eby4)
 <br>(Click on the image to visit the **SortVerse Visualizer** Demo video)
-<br> (https://youtu.be/gFRYyZ6eby4)
+<br> https://youtu.be/gFRYyZ6eby4
 <br> <br>
 ***Research Findings:***<br>
 ![Comparison](https://github.com/RpM-Kinshuk/SortVerse/assets/103813028/5b137641-7130-429a-9386-d4cd17c1c457)
