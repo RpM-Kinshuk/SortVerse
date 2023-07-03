@@ -61,7 +61,7 @@ void C_QuickSort(long long *arr, long long l, long long r)
 {
     if (l < r)
     {
-        long long pi = C_Hoarepartition(arr, l, r);
+        long long pi = C_Split(arr, l, r);
         C_QuickSort(arr, pi + 1, r);
         C_QuickSort(arr, l, pi - 1);
     }
